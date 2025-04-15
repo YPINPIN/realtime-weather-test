@@ -11,7 +11,7 @@ const fetchCurrentWeather = (stationName) => {
   return fetch(URL + QUERY)
     .then((response) => response.json())
     .then((data) => {
-      console.log('data', data);
+      // console.log('data', data);
       const stationData = data.records.Station[0];
       // 將取得的資料回傳出去
       return {
@@ -30,7 +30,7 @@ const fetchWeatherForecast = (locationName) => {
   return fetch(URL_FORECAST + QUERY_FORECAST)
     .then((response) => response.json())
     .then((data) => {
-      console.log('forecast data', data);
+      // console.log('forecast data', data);
       const weatherData = data.records.location[0].weatherElement.reduce(
         (elements, item) => {
           elements[item.elementName] = item.time[0].parameter;
@@ -84,7 +84,7 @@ const fetchSunRise = (countryName) => {
     return fetch(URL_SUNRISE + QUERY_SUNRISE + `&Date=${date}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log('sunrise data', data);
+        // console.log('sunrise data', data);
         const { Date, SunRiseTime, SunSetTime } =
           data.records.locations.location[0].time[0];
 
@@ -134,7 +134,7 @@ const useWeatherAPI = ({ stationName, locationName, countryName }) => {
   }, [stationName, locationName, countryName]);
 
   useEffect(() => {
-    console.log('execute function in useEffect');
+    // console.log('execute function in useEffect');
     fetchData();
   }, [fetchData]);
 

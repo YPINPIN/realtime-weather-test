@@ -60,7 +60,7 @@ const weatherIcons = {
 
 // 使用迴圈來找出該天氣代碼對應到的天氣型態
 const weatherCode2Type = (weatherCode) => {
-  console.log('invoke weatherCode2Type');
+  // console.log('invoke weatherCode2Type');
   const [weatherType] =
     Object.entries(weatherTypes).find(([weatherType, weatherCodes]) =>
       weatherCodes.includes(Number(weatherCode))
