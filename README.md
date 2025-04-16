@@ -29,3 +29,7 @@
 - Demo (Android)
 
   ![demo-02.gif](./demo/demo-02.gif)
+
+- Demo (iOS)
+
+  ![demo-03.gif](./demo/demo-03.gif)
